@@ -103,7 +103,25 @@ function getPasswordOptions() {
   var includeNumeric = confirm("Click OK to confirm including numeric characters.");
   var includeSpecial = confirm("Click OK to confirm including special characters.");
 
-// Function for getting a random element from an array
+  // Validate user input for at least one character type
+  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+    alert("You must select at least one character type. Please try again.");
+    return null;
+  }
+
+  var passwordOptions = {
+    length: length,
+    includeLowercase: includeLowercase,
+    includeUppercase: includeUppercase,
+    includeNumeric: includeNumeric,
+    includeSpecial: includeSpecial
+  };
+
+  return passwordOptions;
+}
+
+
+  // Function for getting a random element from an array
 function getRandom(arr) {
 
 }
