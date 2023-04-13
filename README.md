@@ -24,7 +24,7 @@ The generator was completed when the following criteria were working:
 
 URL: https://github.com/antoninogambino/Password-Generator-Challenge-wk-5.git
 
-GitHub deployed repository:
+GitHub deployed repository: https://antoninogambino.github.io/Password-Generator-Challenge-wk-5/
 
 **Deployed website screenshot with console open showing javascript**
 
