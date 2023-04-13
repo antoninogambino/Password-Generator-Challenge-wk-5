@@ -92,75 +92,14 @@ var upperCasedCharacters = [
 function getPasswordOptions() {
   var length = parseInt(prompt("How many characters would you like your password to contain? (must be between 8 and 128)"));
 
-  // Validate user input for length
-  if (isNaN(length) || length < 8 || length > 128) {
-    alert("Length must be a number between 8 and 128. Please try again.");
-    return null;
-  }
-
-  var includeLowercase = confirm("Click OK to confirm including lowercase characters.");
-  var includeUppercase = confirm("Click OK to confirm including uppercase characters.");
-  var includeNumeric = confirm("Click OK to confirm including numeric characters.");
-  var includeSpecial = confirm("Click OK to confirm including special characters.");
-
-  // Validate user input for at least one character type
-  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
-    alert("You must select at least one character type. Please try again.");
-    return null;
-  }
-
-  var passwordOptions = {
-    length: length,
-    includeLowercase: includeLowercase,
-    includeUppercase: includeUppercase,
-    includeNumeric: includeNumeric,
-    includeSpecial: includeSpecial
-  };
-
-  return passwordOptions;
-}
-
 // Function for getting a random element from an array
 function getRandom(arr) {
-  var randomIndex = Math.floor(Math.random() * arr.length);
-  var randomElement = arr[randomIndex];
-  return randomElement;
+
 }
 
 // Function to generate password with user input
 function generatePassword() {
-  var options = getPasswordOptions();
 
-  if (!options) {
-    return "";
-  }
-
-  var possibleCharacters = [];
-
-  if (options.includeLowercase) {
-    possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);
-  }
-
-  if (options.includeUppercase) {
-    possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
-  }
-
-  if (options.includeNumeric) {
-    possibleCharacters = possibleCharacters.concat(numericCharacters);
-  }
-
-  if (options.includeSpecial) {
-    possibleCharacters = possibleCharacters.concat(specialCharacters);
-  }
-
-  var password = "";
-
-  for (var i = 0; i < options.length; i++) {
-    var randomChar = getRandom(possibleCharacters);
-    password += randomChar;
-  }
-
-  return password;
 }
 
 // Get references to the #generate element
