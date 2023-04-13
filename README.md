@@ -28,6 +28,8 @@ GitHub deployed repository: https://antoninogambino.github.io/Password-Generator
 
 **Deployed website screenshot with console open showing javascript**
 
+Screenshot of final project showing a random 80 characters password generated
+
 ![image](https://user-images.githubusercontent.com/112243266/231699656-4a84f07b-3cc5-498b-ad0f-d266b9c1bb3a.png)
 
 ---
